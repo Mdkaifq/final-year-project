@@ -9,7 +9,7 @@ from django.shortcuts import render
 import os
 
 # Load the pre-trained model
-model = load_model('C:/Users/kaifq/OneDrive/Desktop/bt cnn/image_classifier/templates/cnnbtfinal_newestpart2.h5')
+model = load_model('/content/final-year-project/templates/cnnbtfinal_newest.h5')
 
 # Mapping for class labels
 class_labels = {0: 'glioma',
