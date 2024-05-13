@@ -25,7 +25,7 @@ def classify_image(request):
     if request.method == 'POST' and request.FILES['image']:
         
             img1 = request.FILES['image']
-            temp_image_path = 'C:/Users/kaifq/OneDrive/Desktop/bt cnn/image_classifier/media/temp_image.jpg'
+            temp_image_path = '/content/final-year-project/templates/temp_image.jpg'
             with open(temp_image_path, 'wb') as temp_file:
                 for chunk in img1.chunks():
                     temp_file.write(chunk)
