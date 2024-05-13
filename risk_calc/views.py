@@ -1,7 +1,9 @@
 import pandas as pd
 from django.shortcuts import render
 from .models import predict
+from django.views.decorators.csrf import csrf_exempt
 
+@csrf_extempt
 def risk_calc(request):
     value_list = ['Age', 'Genetic Risk', 'Occupational Hazards', 'Headache',	'Seizure Rate',	'Convulsion Rate',	'Blurred Vision',	'Double Vision',	'Peripheral Vision Loss',	'Loss of Smell',	'Balance Disorder',	'Nausea',	'Vomiting',	'Rate of Memory Lapses',	'Drowsiness',	'Personality disorder',	'Numbness in arms',	'Numbness in legs',	'Syncope Rate'] # it will change every time view1 will get request
     pred = ['no risk detected', 'risk detected']
