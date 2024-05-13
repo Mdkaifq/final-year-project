@@ -2,7 +2,7 @@
 import joblib
 
 
-model = joblib.load('C:/Users/kaifq/OneDrive/Desktop/demo/home/filenamex.joblib')
+model = joblib.load('/content/final-year-project/risk_calc/filenamex.joblib')
 
 def predict(input_data):
     # Perform any necessary preprocessing on input_data
