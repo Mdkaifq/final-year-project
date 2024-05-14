@@ -20,4 +20,4 @@ def risk_calc(request):
         result = pred[prediction[0]]
         #return render(request, 'index.html', {'result': result})
         print(df)
-    return render (request, 'index.html', {'value_list': value_list, 'result':result})
+    return render (request, 'riskcalc.html', {'value_list': value_list, 'result':result})
