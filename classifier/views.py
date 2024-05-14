@@ -47,4 +47,4 @@ def classify_image(request):
             # Print the error for debugging
             
 
-    return render(request, 'upload.html', {'result': result})
+    return render(request, 'imgclassifier.html', {'result': result})
