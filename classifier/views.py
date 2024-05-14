@@ -1,4 +1,3 @@
-#from django.shortcuts import render
 from keras.models import load_model
 from keras.preprocessing import image
 from PIL import Image
@@ -6,6 +5,7 @@ import numpy as np
 import cv2
 from django.conf import settings
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 import os
 
 # Load the pre-trained model
@@ -17,7 +17,7 @@ class_labels = {0: 'glioma',
             2: 'no tumor',
             3: 'pituitary',
             }
-
+@csrf_exempt
 def classify_image(request):
     result = None
     img = None
