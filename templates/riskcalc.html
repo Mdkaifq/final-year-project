@@ -83,7 +83,17 @@
             top: 0;
             left: 0;
         }
-
+    h5{
+            font-family: monospace;
+            grid-column: 1 / -1;
+            margin-top: -12px;
+            justify-self: center;
+            align-self: center;
+            font-family: monospace;
+        }
+        label{
+            font-family: monospace;
+        }
 
     </style>
 </head>
@@ -103,6 +113,8 @@
         {% endfor %}
         <button type="submit">Submit</button>
 
+        <h5>Note: Enter the symptoms on a scale of 1-9</h5>
+        
         <h2> Result:
                 {% if result %}
                 
