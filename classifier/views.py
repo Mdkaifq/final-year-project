@@ -22,7 +22,7 @@ def classify_image(request):
     result = None
     img = None
     img1 = None
-    if request.method == 'POST' and request.FILES['image']:
+    if request.method == 'POST' and 'image' in request.FILES:
         
             img1 = request.FILES['image']
             temp_image_path = '/content/final-year-project/templates/temp_image.jpg'
