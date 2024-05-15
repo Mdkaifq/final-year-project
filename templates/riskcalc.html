@@ -109,7 +109,7 @@
         {% csrf_token %}
         
         {% for val in value_list %}
-        <label for="">{{ val }} <input type='text' value='' class="ip" name='my_list'></input> </label>
+        <label for="">{{ val }} <input type='number' value='0' class="ip" name='my_list'></input> </label>
         {% endfor %}
         <button type="submit">Submit</button>
 
