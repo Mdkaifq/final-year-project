@@ -2,7 +2,7 @@
 
     "builds": [{
 
-        "src": "backend/wsgi.py",
+        "src": "image_classifier/wsgi.py",
 
         "use": "@vercel/python",
 
@@ -16,7 +16,7 @@
 
             "src": "/(.*)",
 
-            "dest": "backend/wsgi.py"
+            "dest": "image_classifier/wsgi.py"
 
         }
 
