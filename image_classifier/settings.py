@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-trl3_)=rv!i@(6aa0og&&k)cd7hm2$oh4j#o#b+4!c6yf7307$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['colab.research.google.com']
+ALLOWED_HOSTS = ['*']
 #CSRF_TRUSTED_ORIGINS = ['colab.research.google.com']
 
 
