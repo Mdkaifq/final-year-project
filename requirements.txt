@@ -1,4 +1,4 @@
-Django
+Django==4.2.13
 joblib
 keras==3.2.1
 numpy
