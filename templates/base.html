@@ -7,8 +7,37 @@
     <meta charset="UTF-8">
     {% block title %}{% endblock %}
     <script src="https://unpkg.com/htmx.org"></script>
-    <link rel="stylesheet"  href=" {% static 'css/base.css' %} ">
     
+    <style>
+.navbar {
+    background-color: #d2d2d6;
+    color: white;
+    padding: 18px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+a {
+text-decoration: none;
+color: rgb(14, 22, 54);
+font-family: Arial, Helvetica, sans-serif;
+}
+.active {
+    font-weight: bold;
+    
+    
+    
+}
+li {
+    padding-left: 11px;
+}
+ul {
+    display: ruby;
+    list-style-type: none;
+    padding-left: unset;
+}
+</style>
    
 </head>
 <body>
