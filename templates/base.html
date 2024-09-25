@@ -1,68 +1,38 @@
+<!-- base.html -->
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    {% block title %}
-
-    {% endblock %}
-    <style>
-        
-        .navbar {
-            background-color: #d2d2d6;
-            color: white;
-            padding: 10px 0;
-            width: 100%;
-            /*text-align: center;*/
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        a{
-            
-            text-decoration: none;
-            color: rgb(14, 22, 54);
-
-        }
-        .active{
-            font-weight: bold;
-            background-color: rgb(14, 22, 54);
-            color: #d2d2d6;
-            padding: 11px 3px 10px 3px;
-
-        }
-        li{
-            padding-left: 11px;
-        }
-         ul{
-            display: ruby;
-            list-style-type: none;
-            padding-left: unset;
-         }
-
-    </style>
+    {% block title %}{% endblock %}
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link rel="stylesheet"  href=" {% static 'css/base.css' %} ">
+    
+   
 </head>
 <body>
 
-
     <div class="navbar">
         <ul>
-
             <li>
-                <a href="/"   {% if request.path == '/' %} class="active" {% endif %} >Classify Tumor</a>
+                <a href="/" hx-get="/" hx-target="#content" hx-push-url="true" 
+                   {% if request.path == '/' %} class="active" {% endif %}>
+                    Classify Tumor
+                </a>
             </li>
-            <li>    
-                <a href="/riskcalc/"   {% if request.path == '/riskcalc/' %} class="active" {% endif %}   >Calculate Risk</a>
+            <li>
+                <a href="/riskcalc/" hx-get="/riskcalc/" hx-target="#content" hx-push-url="true"
+                   {% if request.path == '/riskcalc/' %} class="active" {% endif %}>
+                    Calculate Risk
+                </a>
             </li>
         </ul>
-            
     </div>
 
-
-    
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
 
 </body>
 </html>
-
-{% block content %}
-
-{% endblock %}

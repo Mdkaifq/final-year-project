@@ -1,34 +1,19 @@
+<!-- imgClassifier.html -->
 {% extends 'base.html' %}
 {% load static %}
-
-
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% block title %}
-    <title>Tumor Classifier</title>
-    {% endblock %}
-    <link rel="stylesheet"  href=" {% static 'css/styles.css' %} ">
-</head>
-<body>
 
-    
 
-    <div class="container">
-        <h1>Brain tumor Classifier</h1>
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="file" name="image">
-            <button type="submit">Upload</button>
-        </form>
-        {% if result %}
-            <div class="result">Result: {{ result }}</div>
-            
-        {% endif %}
-    </div>
-</body>
-</html>
-
+<link rel="stylesheet"  href=" {% static 'css/imgclassifier.css' %} ">
+<div class="container">
+    <h1>Brain Tumor Classifier</h1>
+    <form method="post" enctype="multipart/form-data" hx-post="." hx-target="#content">
+        {% csrf_token %}
+        <input type="file" name="image" id="inputField">
+        <button type="submit" id="submitButton" >Upload</button>
+    </form>
+    {% if result %}
+        <div class="result">Result: {{ result }}</div>
+    {% endif %}
+</div>
 {% endblock %}
