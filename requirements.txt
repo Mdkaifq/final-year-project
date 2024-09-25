@@ -1,10 +1,8 @@
 Django==4.2.13
-joblib
 keras==3.2.1
-numpy
 opencv-python
 pandas
 pillow
 scikit-learn==1.2.2
-tensorflow
+tensorflow==2.17.0
 gunicorn
