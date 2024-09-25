@@ -23,5 +23,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('classifier.urls')),
-    path('riskcalc', include('risk_calc.urls')),
+    path('riskcalc/', include('risk_calc.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
