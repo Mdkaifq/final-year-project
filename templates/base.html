@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
 }
-a {
+#navlink {
 text-decoration: none;
 color: rgb(14, 22, 54);
 font-family: Arial, Helvetica, sans-serif;
@@ -37,6 +37,19 @@ ul {
     list-style-type: none;
     padding-left: unset;
 }
+        footer{
+            position: fixed;
+            color: #d2d2d6;
+            font-family: monospace;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 6%;
+            text-align: center;
+            font-size: 15px;
+        }
+        
 </style>
    
 </head>
@@ -46,13 +59,13 @@ ul {
         <ul>
             <li>
                 <a href="/" hx-get="/" hx-target="#content" hx-push-url="true" 
-                   {% if request.path == '/' %} class="active" {% endif %}>
+                   {% if request.path == '/' %} class="active" {% endif %} id="navlink">
                     Classify Tumor
                 </a>
             </li>
             <li>
                 <a href="/riskcalc" hx-get="/riskcalc" hx-target="#content" hx-push-url="true"
-                   {% if request.path == '/riskcalc' %} class="active" {% endif %}>
+                   {% if request.path == '/riskcalc' %} class="active" {% endif %} id="navlink">
                     Calculate Risk
                 </a>
             </li>
@@ -62,6 +75,8 @@ ul {
     <div id="content">
         {% block content %}{% endblock %}
     </div>
-
+    <footer>
+        <p>Trained and developed by Md Kaif Qureshi || &copy All Rights Reserved</p>
+    </footer>
 </body>
 </html>
