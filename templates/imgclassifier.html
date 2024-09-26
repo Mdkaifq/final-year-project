@@ -64,7 +64,7 @@
         outline: none;
         transition: background-color 0.3s ease;
         display: block;
-        margin: 50px auto 20px;
+        margin: 40px auto 20px;
     }
     
     button[type="submit"]:hover {
@@ -92,6 +92,12 @@
     body{
         background-color: rgb(14, 22, 54);
     }
+    .images-link{
+        font-size: 15px;
+        font-family: monospace;
+        font-weight: 500;
+        margin-top: 28px;
+    }
         
 </style>
 <div class="container">
@@ -100,6 +106,7 @@
         {% csrf_token %}
         <input type="file" name="image" id="inputField">
         <button type="submit" id="submitButton" >Upload</button>
+                <p class="images-link">Download Brain MRI images from <a href="https://drive.google.com/drive/folders/1a6meaKx5kKuI2najmo3PElZ4AfgWUps_?usp=drive_link" target="_blank" class="images-link">here</a></p>
     </form>
     {% if result %}
         <div class="result">Result: {{ result }}</div>
