@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 import os
 
 
-#model = load_model('templates/cnnbtfinal_newest.h5')
+model = load_model('templates/cnnbtfinal_newest.h5')
 
 
 class_labels = {0: 'glioma',
