@@ -44,7 +44,5 @@ def classify_image(request):
         # Get the classification result from labels
         result = class_labels[indices]
         
-        return render(request, 'imgclassifier.html', {'result': result})
-    
-    return render(request, 'imgclassifier.html')
+    return render(request, 'imgclassifier.html', {'result': result})
 
