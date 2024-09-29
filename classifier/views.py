@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 import os
 
 
-model = load_model('templates/cnnbtfinal_newest.h5')
+#model = load_model('templates/cnnbtfinal_newest.h5')
 
 
 class_labels = {0: 'glioma',
@@ -43,6 +43,8 @@ def classify_image(request):
 
         # Get the classification result from labels
         result = class_labels[indices]
-
-    return render(request, 'imgclassifier.html', {'result': result})
+        
+        return render(request, 'imgclassifier.html', {'result': result})
+    
+    return render(request, 'imgclassifier.html')
 
